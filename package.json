@@ -8,6 +8,7 @@
     "@theme-ui/presets": "^0.10.0",
     "body-parser": "^1.19.0",
     "dotenv-load": "^2.0.0",
+    "husky": "^7.0.0",
     "next": "^9.5.0",
     "next-connect": "^0.8.1",
     "next-env": "^1.1.1",
@@ -18,7 +19,14 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"(src|pages)/**/*.{js,jsx}\"",
+    "prepare": "husky install"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": "^7.0.0",
+    "prettier": "^2.3.2"
+  }
 }
